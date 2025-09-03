@@ -2,7 +2,7 @@
   <div class="router-view">
     <h1>Vue Router</h1>
     
-    <section class="section" v-motion-slide-visible-once-bottom>
+    <section class="section animate">
       <h2>O que é o Vue Router?</h2>
       <p>
         <span class="highlight">Vue Router</span> é a biblioteca oficial de roteamento para Vue.js. 
@@ -16,7 +16,7 @@
       </p>
     </section>
     
-    <section class="section" v-motion-slide-visible-once-bottom>
+    <section class="section animate">
       <h2>Papel do Vue Router em Aplicações Vue.js</h2>
       <p>O Vue Router desempenha vários papéis importantes:</p>
       <ul>
@@ -30,7 +30,7 @@
       </ul>
     </section>
     
-    <section class="section" v-motion-slide-visible-once-bottom>
+    <section class="section animate">
       <h2>Conceitos Básicos do Vue Router</h2>
       
       <h3>&lt;RouterView&gt;</h3>
@@ -131,7 +131,7 @@ export default {
 }</code></pre>
     </section>
     
-    <section class="section" v-motion-slide-visible-once-bottom>
+    <section class="section animate">
       <h2>Como Funciona a Implementação</h2>
       <p>
         Para implementar o Vue Router em um projeto Vue.js, você precisa:
@@ -194,7 +194,7 @@ app.mount('#app')</code></pre>
 &lt;/template&gt;</code></pre>
     </section>
     
-    <section class="section" v-motion-slide-visible-once-bottom>
+    <section class="section animate">
       <h2>Demonstração ao Vivo</h2>
       <p>
         Este próprio site é uma demonstração de Vue Router em funcionamento! 

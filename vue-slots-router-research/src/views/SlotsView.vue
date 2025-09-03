@@ -2,7 +2,7 @@
   <div class="slots-view">
     <h1>Slots no Vue.js</h1>
     
-    <section class="section" v-motion-slide-visible-once-bottom>
+    <section class="section animate">
       <h2>O que são Slots?</h2>
       <p>
         <span class="highlight">Slots</span> são um recurso do Vue.js que permite a 
@@ -17,7 +17,7 @@
       </p>
     </section>
     
-    <section class="section" v-motion-slide-visible-once-bottom>
+    <section class="section animate">
       <h2>Para que servem e quando são úteis?</h2>
       <p>Os slots são úteis quando:</p>
       <ul>
@@ -28,7 +28,7 @@
       </ul>
     </section>
     
-    <section class="section" v-motion-slide-visible-once-bottom>
+    <section class="section animate">
       <h2>Como funcionam os Slots?</h2>
       <p>
         O funcionamento dos slots é relativamente simples:
@@ -43,7 +43,7 @@
       </p>
     </section>
     
-    <section class="section" v-motion-slide-visible-once-bottom>
+    <section class="section animate">
       <h2>Tipos de Slots</h2>
       
       <h3>Slot Padrão (Default)</h3>
@@ -144,7 +144,7 @@ export default {
 &lt;/template&gt;</code></pre>
     </section>
     
-    <section class="section" v-motion-slide-visible-once-bottom>
+    <section class="section animate">
       <h2>Exemplo Simples de Slot</h2>
       <p>
         Veja a seguir um exemplo simples de como um componente pode receber conteúdo via slot:
