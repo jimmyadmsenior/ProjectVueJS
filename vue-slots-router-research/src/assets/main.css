@@ -1,5 +1,31 @@
 @import './base.css';
 
+/* Animações para seções */
+.section {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: rgba(40, 42, 54, 0.5);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease;
+}
+
+.section.animate {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Outros elementos animados */
 @keyframes orbit {
   0% {
     transform: rotate(0deg) translateX(70px) rotate(0deg);
