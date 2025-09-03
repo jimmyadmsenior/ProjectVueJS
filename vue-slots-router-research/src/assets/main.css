@@ -1,0 +1,163 @@
+@import './base.css';
+
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translateX(70px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(70px) rotate(-360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+  position: relative;
+}
+
+#app::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  z-index: -1;
+  background: radial-gradient(circle at center, rgba(20, 30, 60, 0.5) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Estrela orbitando */
+.floating-planet {
+  position: fixed;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #bd93f9, #282a36);
+  box-shadow: 0 0 20px rgba(189, 147, 249, 0.6);
+  top: 20%;
+  right: 10%;
+  z-index: -1;
+  animation: pulse 8s ease-in-out infinite;
+}
+
+.floating-planet::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #8be9fd;
+  box-shadow: 0 0 15px rgba(139, 233, 253, 0.8);
+  animation: orbit 8s linear infinite;
+}
+
+/* Estilos de cursor personalizado */
+* {
+  cursor: none;
+}
+
+.custom-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #8be9fd;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  z-index: 9999;
+  transition: transform 0.05s linear;
+  box-shadow: 0 0 10px rgba(139, 233, 253, 0.8);
+  will-change: transform;
+  margin: 0;
+  padding: 0;
+  transform-origin: center;
+  /* Desativar qualquer transformação padrão */
+  transform: translate3d(0, 0, 0);
+  /* Melhorar precisão do cursor */
+  backface-visibility: hidden;
+}
+
+.custom-cursor-follower {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #8be9fd;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transition: transform 0.1s linear;
+  box-shadow: 0 0 15px rgba(139, 233, 253, 0.3);
+  will-change: transform;
+  margin: 0;
+  padding: 0;
+  transform-origin: center;
+  /* Desativar qualquer transformação padrão */
+  transform: translate3d(0, 0, 0);
+  /* Melhorar precisão do cursor */
+  backface-visibility: hidden;
+}
+
+/* Animações para elementos */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.slide-enter-from {
+  transform: translateX(-50px);
+  opacity: 0;
+}
+
+.slide-leave-to {
+  transform: translateX(50px);
+  opacity: 0;
+}
+
+/* Estilos para seções */
+.section {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: rgba(40, 42, 54, 0.8);
+  box-shadow: 0 4px 15px rgba(139, 233, 253, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(139, 233, 253, 0.1);
+}
+
+.section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(139, 233, 253, 0.3);
+  border: 1px solid rgba(139, 233, 253, 0.3);
+}
+
+/* Código para responsividade */
+@media (min-width: 1024px) {
+  #app {
+    padding: 0 2rem;
+  }
+}
