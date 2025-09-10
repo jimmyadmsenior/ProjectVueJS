@@ -82,8 +82,11 @@ cd vue-slots-router-research
 # Instale as dependências
 npm install
 
-# Inicie o servidor de desenvolvimento
+# Inicie o servidor de desenvolvimento local
 npm run dev
+
+# Para gerar uma versão de produção (não é necessário para deploy na Vercel)
+# npm run build
 ```
 
 ## Uso
@@ -91,6 +94,30 @@ npm run dev
 Após iniciar o servidor de desenvolvimento, o site estará disponível em `http://localhost:5173/`. 
 
 Navegue pelas diferentes seções do site usando a barra de navegação no topo. Cada página contém exemplos interativos e explicações detalhadas sobre os conceitos de slots e router no Vue.js.
+
+## Deploy
+
+### Deploy na Vercel
+
+Este projeto está configurado para ser facilmente implantado na Vercel. Siga os passos abaixo:
+
+1. **Conecte seu repositório GitHub à Vercel**
+   - Acesse [vercel.com](https://vercel.com)
+   - Faça login ou crie uma conta
+   - Clique em "New Project"
+   - Importe este repositório do GitHub
+   
+2. **Configuração do Projeto**
+   - Framework Preset: Vue.js
+   - Build Command: `npm run build` (A Vercel executará isto automaticamente)
+   - Output Directory: `dist`
+   - Install Command: `npm install`
+
+3. **Configurações Avançadas**
+   - Não é necessário adicionar variáveis de ambiente para este projeto
+   - Você pode configurar um domínio personalizado nas configurações do projeto após o deploy
+
+A Vercel irá automaticamente construir e implantar seu site. Nenhuma configuração adicional é necessária.
 
 ## Estrutura do Projeto
 
