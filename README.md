@@ -156,6 +156,6 @@ Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE](LICE
 ---
 
 <div align="center">
-  <p>Desenvolvido com ❤️ por [Seu Nome]</p>
+  <p>Desenvolvido com ❤️ por jimmyadmsenior</p>
 </div>
 
